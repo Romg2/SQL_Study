@@ -1,4 +1,4 @@
--- 012. 비교 연산자 배우기4
+-- 013. 비교 연산자 배우기4
 -- IS NULL
 SELECT ENAME, COMM
 FROM EMP
