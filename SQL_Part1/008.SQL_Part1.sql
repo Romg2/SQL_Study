@@ -1,6 +1,6 @@
 -- 008. WHERE절 배우기2
 -- 문자, 날짜 등 모두 작은 따옴표
--- 현재 날짜 FORMAY = DD/MON/RR
+-- 현재 날짜 FORMAT = DD/MON/RR
 SELECT ENAME, SAL, JOB, HIREDATE, DEPTNO
 FROM EMP
 WHERE ENAME = 'SCOTT' OR HIREDATE= '17/NOV/81';
