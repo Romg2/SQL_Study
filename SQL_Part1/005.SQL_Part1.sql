@@ -1,0 +1,3 @@
+-- 005. 중복된 데이터 제거 후 출력
+SELECT DISTINCT JOB
+FROM EMP;
