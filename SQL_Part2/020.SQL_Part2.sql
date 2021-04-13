@@ -1,0 +1,10 @@
+-- 020. 특정 철자를 다른 철자로 변경하기
+-- REPLACE(컬럼, OLD_TEXT, NEW_TEXT)
+SELECT ENAME, REPLACE(SAL, 0, '*') AS VAR1
+FROM EMP;
+
+
+-- 참고: REGEXP_REPLACE
+-- SAL의 숫자 0~3을 모두 *로 바꿔줌
+SELECT ENAME, REGEXP_REPLACE(SAL, '[0-3]', '*') AS VAR1
+FROM EMP;
