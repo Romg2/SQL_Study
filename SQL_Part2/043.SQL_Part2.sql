@@ -1,0 +1,11 @@
+-- 043. 데이터 분석 함수로 등급 출력하기
+-- NTILE(나눌등급수) OVER (ORDER BY 기준)
+SELECT ENAME, JOB, SAL,
+       NTILE(5) OVER (ORDER BY SAL DESC) AS 등급
+FROM EMP;
+
+-- NULL 값이 있는 경우
+-- NULLS LAST: NULL값을 마지막으로 출력
+SELECT ENAME, JOB, COMM,
+       NTILE(5) OVER (ORDER BY COMM DESC NULLS LAST) AS 등급
+FROM EMP;
