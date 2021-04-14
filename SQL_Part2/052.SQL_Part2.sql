@@ -1,4 +1,5 @@
 -- 052. 데이터 분석 함수로 집계 결과 출력하기
+-- ROLLUP: 마지막 행에 집계 결과를 출력
 SELECT JOB, SUM(SAL) AS 합계
 FROM EMP
 GROUP BY ROLLUP(JOB);
