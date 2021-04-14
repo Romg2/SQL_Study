@@ -1,0 +1,23 @@
+-- 039. 토탈값 출력하기
+
+-- 조건절 없이 합계 출력
+SELECT JOB, SUM(SAL) AS 합계
+FROM EMP
+GROUP BY JOB
+ORDER BY 합계 DESC;
+
+-- 조건절 포함하여 합계 출력
+SELECT JOB, SUM(SAL) AS 합계
+FROM EMP
+WHERE JOB != 'ANALYST'
+GROUP BY JOB
+HAVING SUM(SAL) >= 5500
+ORDER BY 합계 DESC;
+
+-- SQL의 처리 순서
+-- 1. FROM
+-- 2. WHERE
+-- 3. GROUP BY
+-- 4. HAVING
+-- 5. SELECT
+-- 6. ORDER BY
