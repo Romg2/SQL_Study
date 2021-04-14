@@ -1,0 +1,14 @@
+-- 046. 데이터 분석 함수로 바로 전 행과 다음 행 출력하기
+-- LAG(컬럼, N번째 이전행) OVER ()
+-- LEAD(컬럼, N번째 다음행) OVER ()
+SELECT JOB, ENAME, SAL,
+       LAG(SAL,1) OVER (ORDER BY SAL) AS 전행,
+       LEAD(SAL,1) OVER (ORDER BY SAL) AS 다음행
+FROM EMP
+WHERE JOB = 'MANAGER';
+
+-- PARTITION BY 사용 직업별로 적용
+SELECT JOB, ENAME, SAL,
+       LAG(SAL,1) OVER (PARTITION BY JOB ORDER BY SAL) AS 전행,
+       LEAD(SAL,1) OVER (PARTITION BY JOB ORDER BY SAL) AS 다음행
+FROM EMP;
