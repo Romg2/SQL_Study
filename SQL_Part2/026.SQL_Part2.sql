@@ -1,0 +1,4 @@
+-- 026. 날짜 간 개월 수 출력하기
+-- MONTHS_BETWEEN(최신날짜, 이전날짜)
+SELECT ENAME, ROUND( MONTHS_BETWEEN(SYSDATE,HIREDATE), 0) AS 근속월수
+FROM EMP; 
