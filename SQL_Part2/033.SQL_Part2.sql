@@ -1,0 +1,16 @@
+-- 033. NULL 값 대신 다른 데이터 출력하기
+
+-- 기본 출력
+SELECT ENAME, SAL, COMM, SAL+COMM AS "연봉+커미션"
+FROM EMP
+WHERE JOB IN ('SALESMAN', 'ANALYST');
+
+-- NVL 적용 (값이 변화되는 것은 아니며 출력만)
+SELECT ENAME, SAL, NVL(COMM,0) AS 커미션, SAL+NVL(COMM,0) AS "연봉+커미션"
+FROM EMP
+WHERE JOB IN ('SALESMAN', 'ANALYST');
+
+-- NVL2(컬럼, NULL이 아닌 경우 출력값, NULL인 경우 출력값)
+SELECT ENAME, SAL, COMM, NVL2(COMM, SAL+COMM, SAL)
+FROM EMP
+WHERE JOB IN ('SALESMAN', 'ANALYST');
