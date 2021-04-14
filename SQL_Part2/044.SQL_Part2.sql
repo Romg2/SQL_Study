@@ -1,5 +1,5 @@
 -- 044. 데이터 분석 함수로 순위의 비율 출력하기
--- CUME_DIST() OVER (): 누적 비율로서 각 순위가 차지하는 비율 개념
+-- CUME_DIST() OVER (): 누적 비율로서 각 순위가 차지하는 누적비율 개념
 SELECT ENAME, SAL, 
 RANK() OVER (ORDER BY SAL DESC) AS RANK,
 DENSE_RANK() OVER (ORDER BY SAL DESC) AS RANK2,
