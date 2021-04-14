@@ -1,0 +1,18 @@
+-- 047. COLUMN을 ROW로 출력하기
+
+-- 각 부서별 월급 합계
+SELECT 
+SUM(DECODE(DEPTNO, 10, SAL)) AS "부서-10",
+SUM(DECODE(DEPTNO, 20, SAL)) AS "부서-20",
+SUM(DECODE(DEPTNO, 30, SAL)) AS "부서-30"
+FROM EMP;
+
+-- 각 직업별, 부서별 월급 합계
+-- 엑셀의 피벗테이블과 비슷한 형태
+SELECT JOB,
+SUM(DECODE(DEPTNO, 10, SAL)) AS "부서-10",
+SUM(DECODE(DEPTNO, 20, SAL)) AS "부서-20",
+SUM(DECODE(DEPTNO, 30, SAL)) AS "부서-30"
+FROM EMP
+GROUP BY JOB
+ORDER BY JOB;
