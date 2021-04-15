@@ -1,0 +1,7 @@
+-- 9. 여러 테이블의 데이터를 조인해서 출력하기2
+
+-- NON EQUI JOIN
+-- SALGRADE: 월급 구간에 따른 등급 테이블
+SELECT A.ENAME, A.SAL, B.GRADE
+FROM EMP A, SALGRADE B
+WHERE A.SAL BETWEEN B.LOSAL AND B.HISAL;
