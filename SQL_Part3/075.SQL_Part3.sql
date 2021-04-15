@@ -1,0 +1,9 @@
+-- 75. 서브 쿼리 사용하기5
+
+-- 서브 쿼리는 GROUP BY 제외 모두 사용 가능
+
+-- HAVING 서브 쿼리
+SELECT JOB, SUM(SAL) AS 월급합계
+FROM EMP
+GROUP BY JOB
+HAVING SUM(SAL) > (SELECT SUM(SAL) FROM EMP WHERE JOB = 'SALESMAN');
