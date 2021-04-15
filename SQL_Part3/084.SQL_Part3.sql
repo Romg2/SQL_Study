@@ -1,0 +1,13 @@
+-- 084. SELECT FOR UPDATE절 이해하기
+
+-- 터미널1에서 실행 후 COMMIT X
+SELECT ENAME, SAL, DEPTNO
+FROM EMP
+WHERE ENAME = 'JONES'
+FOR UPDATE;
+-- COMMIT;
+
+-- 터미널2에서 해당 명령어 실행시 작업이 되지 않음 위에서 LOCK이 되었기 때문
+UPDATE EMP
+SET SAL = 9000
+WHERE ENAME = 'JONES';
