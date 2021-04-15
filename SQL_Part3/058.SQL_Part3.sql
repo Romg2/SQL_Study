@@ -1,0 +1,17 @@
+-- 058. 여러 테이블의 데이터를 조인해서 출력하기
+
+-- CARTESIAN PRODUCT
+-- 모든 경우의 수: 테이블1 행의 수 X 테이블2 행의 수 만큼 출력
+SELECT ENAME, LOC
+FROM EMP, DEPT;
+
+-- EQUI JOIN
+-- WHERE절이 일치하는 경우만
+SELECT ENAME, LOC
+FROM EMP, DEPT
+WHERE EMP.DEPTNO = DEPT.DEPTNO
+
+-- Alias, 조건 등 추가
+SELECT A.DEPTNO, A.ENAME, A.JOB, B.LOC
+FROM EMP A, DEPT B
+WHERE A.DEPTNO = B.DEPTNO AND A.JOB = 'MANAGER';
