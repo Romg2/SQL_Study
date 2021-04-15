@@ -1,0 +1,4 @@
+ -- 056. 출력되는 행 제한하기
+ SELECT ROWNUM, ENAME, SAL
+ FROM EMP
+ WHERE ROWNUM <= 5;
