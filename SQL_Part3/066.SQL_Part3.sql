@@ -1,0 +1,11 @@
+-- 66. 여러 테이블의 데이터를 조인해서 출력하기9
+
+-- 작업 데이터 수정
+INSERT INTO EMP(EMPNO, ENAME, SAL, JOB, DEPTNO)
+VALUES(8282, 'JACK', 3000, 'ANALYST', 50);
+
+-- FULL OUTER JOIN
+-- 일치하지 않고 한쪽 테이블에만 있는 정보도 출력
+SELECT A.ENAME, A.JOB, B.LOC
+FROM EMP A 
+FULL OUTER JOIN DEPT B ON A.DEPTNO = B.DEPTNO;
