@@ -1,0 +1,8 @@
+-- 092. 계층형 질의문으로 서열을 주고 데이터 출력하기4
+
+-- SYS_CONNECT_BY_PATH(컬럼,구분자): 서열을 가로로 나타냄
+SELECT ENAME,
+LTRIM(SYS_CONNECT_BY_PATH(ENAME,'/'), '/') AS PATH
+FROM EMP
+START WITH ENAME = 'KING'
+CONNECT BY PRIOR EMPNO = MGR;
