@@ -9,4 +9,4 @@ NOCYCLE;
 -- 만약 사원관리테이블에서 새로운 사원이 입사한다면 사원번호는 중복되면 안됨
 -- SEQUENCE.NEXTVAL을 이용해서 수 작업 없이 진행 가능
 INSERT INTO EMP(DEPTNO, ENAME, SAL)
-VALUES(SEQ01.NEXTVAL, 'JACK', 3500);
+VALUES(SEQ1.NEXTVAL, 'JACK', 3500);
