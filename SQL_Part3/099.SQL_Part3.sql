@@ -1,6 +1,5 @@
 -- 099. 실수로 지운 데이터 복구하기
 
-
 -- 현 데이터 확인
 SELECT ENAME, SAL
 FROM EMP
