@@ -1,0 +1,12 @@
+-- 098. 절대로 중복되지 않는 번호 만들기
+
+CREATE SEQUENCE SEQ1
+START WITH 1
+INCREMENT BY 1
+MAXVALUE 100
+NOCYCLE;
+
+-- 만약 사원관리테이블에서 새로운 사원이 입사한다면 사원번호는 중복되면 안됨
+-- SEQUENCE.NEXTVAL을 이용해서 수 작업 없이 진행 가능
+INSERT INTO EMP(DEPTNO, ENAME, SAL)
+VALUES(SEQ01.NEXTVAL, 'JACK', 3500);
