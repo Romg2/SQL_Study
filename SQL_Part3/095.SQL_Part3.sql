@@ -1,0 +1,7 @@
+-- 095. 복잡한 쿼리를 단순하게 하기
+
+-- VIEW: 가상 테이블
+CREATE VIEW EMP_VIEW AS
+    SELECT EMPNO, ENAME, SAL, JOB, DEPTNO
+    FROM EMP
+    WHERE JOB = 'ANALYST';
