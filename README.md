@@ -56,7 +56,7 @@ SQL에 대한 공부 내용입니다.
 047. COLUMN을 ROW로 출력하기 (SUM + DECODE)
 048. COLUMN을 ROW로 출력하기2 (PIVOT)
 049. ROW를 COLUMN로 출력하기 (UNPIVOT)
-050. 데이터 분석 함수로 누적 데이터 출력하기 (SUM_OVER)
+050. 데이터 분석 함수로 누적 데이터 출력하기 (SUM OVER)
 051. 데이터 분석 함수로 비율 출력하기 (RATIO_TO_REPORT)
 052. 데이터 분석 함수로 집계 결과 출력하기 (ROLLUP)
 053. 데이터 분석 함수로 집계 결과 출력하기2 (CUBE)
