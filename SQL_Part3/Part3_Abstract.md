@@ -287,15 +287,19 @@ CREATE VIEW VIEW1 AS
 ### 096. 복잡한 쿼리를 단순하게 하기2 (VIEW)
 
 ### 097. 데이터 검색 속도를 높이기 (INDEX)
+'''
 CREATE INDEX INDEX1
 ON TABLE1(COL1);
+'''
 
 ### 098. 절대로 중복되지 않는 번호 만들기 (SEQUENCE)
+'''
 CREATE SEQUENCE SEQUENCE1
 START WITH N
 INREMENT BY N
 MAXVALUE N
 NOCYCLE;
+'''
 
 ### 099. 실수로 지운 데이터 복구하기 (FLASHBACK QUERY)
 ```
