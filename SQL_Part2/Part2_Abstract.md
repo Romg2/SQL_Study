@@ -141,8 +141,7 @@ SELECT
 CASE COL1 WHEN 조건1 THEN 결과1
 CASE COL2 WHEN 조건2 THEN 결과2
 ...
-ELSE 결과N
-END AS "A1"
+ELSE 결과N END AS "A1"
 FROM TABLE;
 ```
 
@@ -291,12 +290,20 @@ FROM TABLE;
 ```
 
 ### 기타 사항
-```
 SQL 실행 순서
-
-
-INTERVAL  -27
-NULLS LAST -42
-INCLUDE NULLS -49
-
 ```
+1. FROM
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. ORDER BY
+```
+
+INTERVAL: 섬세한 날짜 계산 - 예제 027 참고
+
+
+NULLS LAST: NULL값을 마지막으로 출력 - 예제 043 참고
+
+
+INCLUDE NULLS: NULL 값인 행도 결과에 포함 - 예제 047 참고
