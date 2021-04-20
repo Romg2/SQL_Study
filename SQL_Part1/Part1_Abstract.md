@@ -2,13 +2,13 @@
 ### 001. 테이블에서 특정 열 선택하기
 ```
 SELECT COL1, COL2
-FROM TABLE
+FROM TABLE;
 ```
 
 ### 002. 테이블에서 모든 열 선택하기
 ```
 SELECT *
-FROM TABLE
+FROM TABLE;
 ```
 
 ### 003. Alias(별칭)을 사용하여 추출하기
